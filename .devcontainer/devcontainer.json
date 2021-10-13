@@ -1,0 +1,11 @@
+{
+    "name": "denkidai-bot",
+    "dockerFile": "../Dockerfile",
+    "appPort": 8000,
+    "extensions": [
+      "ms-python.python",
+      "oderwat.indent-rainbow",
+    ],
+    "forwardPorts": [
+    ],
+  }
