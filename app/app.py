@@ -14,7 +14,7 @@ JST = timezone(timedelta(hours=+9), 'JST')
 def daily_job():
     yesterday = datetime.now(JST) - timedelta(days=1)
     res = json.loads(
-            subprocess.check_output(["python3", "tepco-watt-stats.py", str(yesterday.year) + "-" + str(yesterday.month), "--json"], encoding="utf-8")
+            subprocess.check_output(["python3", "tepco-watt-stats.py", str(yesterday.year) + "-" + str(yesterday.month).zfill(2), "--json"], encoding="utf-8")
         )
     amount_used_yesterday = res["使用量"][-1]["ご使用量"]
     
